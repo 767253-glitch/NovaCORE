@@ -1,0 +1,291 @@
+
+<h2 class="sr-only">NovaCORE Energy & Computing — hypothetical company profile for a school project covering SMR nuclear power, AI data center infrastructure, startup capital, and revenue projections.</h2>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
+  .nc-root { font-family: 'DM Sans', sans-serif; color: var(--color-text-primary); padding: 0 0 2rem; }
+  .nc-header { border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+  .nc-logo { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; }
+  .nc-logo span { color: #BA7517; }
+  .nc-tagline { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .nc-badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--color-background-warning); color: var(--color-text-warning); font-family: 'Space Mono', monospace; margin-left: 8px; vertical-align: middle; }
+  .nc-section-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-tertiary); font-family: 'Space Mono', monospace; margin-bottom: 0.75rem; }
+  .nc-grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .nc-metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.85rem 1rem; }
+  .nc-metric-label { font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 4px; font-family: 'Space Mono', monospace; }
+  .nc-metric-val { font-size: 20px; font-weight: 500; font-family: 'Space Mono', monospace; color: #BA7517; }
+  .nc-metric-sub { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
+  .nc-divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .nc-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .nc-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .nc-card h3 { font-size: 13px; font-weight: 500; margin: 0 0 0.75rem; color: var(--color-text-primary); }
+  .nc-phase { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .nc-phase-dot { width: 8px; height: 8px; border-radius: 50%; background: #BA7517; margin-top: 5px; flex-shrink: 0; }
+  .nc-phase-dot.gray { background: var(--color-border-secondary); }
+  .nc-phase-dot.amber2 { background: #EF9F27; }
+  .nc-phase-body { flex: 1; }
+  .nc-phase-title { font-size: 13px; font-weight: 500; }
+  .nc-phase-detail { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .nc-phase-cost { font-family: 'Space Mono', monospace; font-size: 12px; color: #BA7517; }
+  .nc-reason { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .nc-reason-num { font-family: 'Space Mono', monospace; font-size: 11px; color: #BA7517; min-width: 18px; margin-top: 1px; }
+  .nc-reason-text { font-size: 13px; color: var(--color-text-secondary); }
+  .nc-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+  .nc-row:last-child { border-bottom: none; }
+  .nc-row-label { color: var(--color-text-secondary); }
+  .nc-row-val { font-family: 'Space Mono', monospace; font-weight: 500; }
+  .nc-row-val.green { color: #3B6D11; }
+  .nc-row-val.amber { color: #BA7517; }
+  .nc-verdict { background: var(--color-background-warning); border: 0.5px solid var(--color-border-warning); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+  .nc-verdict h3 { font-size: 13px; font-weight: 500; color: var(--color-text-warning); margin: 0 0 0.5rem; }
+  .nc-verdict p { font-size: 13px; color: var(--color-text-warning); margin: 0; line-height: 1.6; }
+  .nc-fullcard { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+  .nc-compare-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .nc-compare-cell { padding: 10px 12px; border-right: 0.5px solid var(--color-border-tertiary); font-size: 12px; }
+  .nc-compare-cell:last-child { border-right: none; }
+  .nc-compare-cell.header { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--color-text-tertiary); background: var(--color-background-secondary); }
+  .nc-compare-cell.highlight { background: #FAEEDA; color: #633806; font-weight: 500; }
+  .nc-compare-cell.highlight.dark { background: #412402; color: #FAC775; }
+  .nc-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .nc-bar-label { font-size: 12px; color: var(--color-text-secondary); width: 100px; flex-shrink: 0; }
+  .nc-bar-track { flex: 1; height: 8px; background: var(--color-background-secondary); border-radius: 4px; overflow: hidden; }
+  .nc-bar-fill { height: 100%; border-radius: 4px; }
+  .nc-bar-pct { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--color-text-secondary); width: 36px; text-align: right; }
+</style>
+
+<div class="nc-root">
+
+  <div class="nc-header">
+    <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
+      <div class="nc-logo">Nova<span>CORE</span></div>
+      <div class="nc-badge">Hypothetical · School Project</div>
+    </div>
+    <div class="nc-tagline">Nuclear-Powered AI Infrastructure &nbsp;·&nbsp; Oak Ridge, Tennessee</div>
+    <div style="font-size:13px; color:var(--color-text-secondary); margin-top:10px; max-width:560px; line-height:1.6;">A full-stack AI infrastructure company generating 24/7 carbon-free electricity via Small Modular Reactors (SMRs) and selling co-located AI compute to hyperscalers and enterprises under long-term contracts.</div>
+  </div>
+
+  <div class="nc-section-label">Key metrics at full scale (Year 8)</div>
+  <div class="nc-grid4">
+    <div class="nc-metric">
+      <div class="nc-metric-label">Total startup capital</div>
+      <div class="nc-metric-val">$3.75B</div>
+      <div class="nc-metric-sub">Phased over 8 years</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">SMR capacity</div>
+      <div class="nc-metric-val">300 MW</div>
+      <div class="nc-metric-sub">4 × Xe-100 units</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">Compute capacity</div>
+      <div class="nc-metric-val">200 MW</div>
+      <div class="nc-metric-sub">AI GPU clusters</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">Annual revenue</div>
+      <div class="nc-metric-val">~$490M</div>
+      <div class="nc-metric-sub">At full operation</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">EBITDA margin</div>
+      <div class="nc-metric-val">~62%</div>
+      <div class="nc-metric-sub">~$304M/year</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">Site footprint</div>
+      <div class="nc-metric-val">500 ac</div>
+      <div class="nc-metric-sub">East Tennessee</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">Reactor lifespan</div>
+      <div class="nc-metric-val">60 yrs</div>
+      <div class="nc-metric-sub">Carbon-free output</div>
+    </div>
+    <div class="nc-metric">
+      <div class="nc-metric-label">Carbon emissions</div>
+      <div class="nc-metric-val">Zero</div>
+      <div class="nc-metric-sub">Operational CO₂</div>
+    </div>
+  </div>
+
+  <hr class="nc-divider">
+
+  <div class="nc-section-label">Startup capital — phased investment</div>
+  <div class="nc-fullcard">
+    <div class="nc-phase">
+      <div class="nc-phase-dot"></div>
+      <div class="nc-phase-body">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="nc-phase-title">Phase 1 — Licensing &amp; Site Prep (Years 0–3)</div>
+          <div class="nc-phase-cost">$250M</div>
+        </div>
+        <div class="nc-phase-detail">NRC pre-application, land acquisition (500 acres), environmental studies, engineering &amp; design, grid interconnection studies. Funded by DOE ARDP grant + Series A equity.</div>
+      </div>
+    </div>
+    <div class="nc-phase">
+      <div class="nc-phase-dot amber2"></div>
+      <div class="nc-phase-body">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="nc-phase-title">Phase 2 — SMR Construction (Years 3–7)</div>
+          <div class="nc-phase-cost">$2.2B</div>
+        </div>
+        <div class="nc-phase-detail">4 × X-energy Xe-100 units at ~$5,500/kW for 300 MW total. Cooling systems, turbine hall, grid substation. Funded primarily via DOE Loan Programs Office + project debt.</div>
+      </div>
+    </div>
+    <div class="nc-phase">
+      <div class="nc-phase-dot gray"></div>
+      <div class="nc-phase-body">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="nc-phase-title">Phase 3 — Data Center Build (Years 5–8)</div>
+          <div class="nc-phase-cost">$1.3B</div>
+        </div>
+        <div class="nc-phase-detail">200 MW AI compute campus: facility construction ($400M), NVIDIA H100/H200 GPU clusters ($700M), networking, liquid cooling, security. Can begin construction while reactor finishes.</div>
+      </div>
+    </div>
+    <hr style="margin: 10px 0; border:none; border-top: 0.5px solid var(--color-border-tertiary);">
+    <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:500;">
+      <span>Total capital required</span>
+      <span style="font-family:'Space Mono',monospace; color:#BA7517;">$3.75B</span>
+    </div>
+    <div style="font-size:11px; color:var(--color-text-tertiary); margin-top:6px;">Funding mix: ~$500M DOE grants · ~$1.5B DOE Loan Programs Office · ~$1B private equity · ~$750M revenue bonds</div>
+  </div>
+
+  <hr class="nc-divider">
+
+  <div class="nc-grid2">
+    <div>
+      <div class="nc-section-label">Why Oak Ridge, Tennessee?</div>
+      <div class="nc-card" style="height:calc(100% - 28px); box-sizing:border-box;">
+        <div class="nc-reason">
+          <div class="nc-reason-num">01</div>
+          <div class="nc-reason-text"><strong style="font-weight:500;">Nuclear workforce</strong> — Oak Ridge National Laboratory &amp; TVA have trained a deep nuclear talent pool for 70+ years.</div>
+        </div>
+        <div class="nc-reason">
+          <div class="nc-reason-num">02</div>
+          <div class="nc-reason-text"><strong style="font-weight:500;">TVA partnership</strong> — Tennessee Valley Authority is the most nuclear-experienced utility in the US; an ideal grid off-take partner.</div>
+        </div>
+        <div class="nc-reason">
+          <div class="nc-reason-num">03</div>
+          <div class="nc-reason-text"><strong style="font-weight:500;">Cooling water</strong> — The Tennessee River provides the reliable cooling water supply SMRs require.</div>
+        </div>
+        <div class="nc-reason">
+          <div class="nc-reason-num">04</div>
+          <div class="nc-reason-text"><strong style="font-weight:500;">Low land &amp; power costs</strong> — Industrial land ~$5K/acre vs $200K+ in Northern Virginia. TVA rates are historically the lowest in the US.</div>
+        </div>
+        <div class="nc-reason">
+          <div class="nc-reason-num">05</div>
+          <div class="nc-reason-text"><strong style="font-weight:500;">Fiber &amp; connectivity</strong> — Major internet exchange points in Atlanta and Charlotte are within 250 miles, keeping latency competitive.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="nc-section-label">Revenue breakdown</div>
+      <div class="nc-card" style="height:calc(100% - 28px); box-sizing:border-box;">
+        <div class="nc-row">
+          <span class="nc-row-label">AI compute / colocation</span>
+          <span class="nc-row-val green">$432M/yr</span>
+        </div>
+        <div style="font-size:11px; color:var(--color-text-tertiary); margin: -4px 0 10px; padding-left:0;">150,000 kW × $240/kW/month</div>
+        <div class="nc-row">
+          <span class="nc-row-label">Grid power sales (excess 100 MW)</span>
+          <span class="nc-row-val amber">$57M/yr</span>
+        </div>
+        <div style="font-size:11px; color:var(--color-text-tertiary); margin: -4px 0 10px;">100 MW × 8,760 hrs × $65/MWh</div>
+        <div class="nc-row" style="font-weight:500; font-size:14px;">
+          <span>Total revenue</span>
+          <span class="nc-row-val" style="font-size:15px;">$489M/yr</span>
+        </div>
+        <div class="nc-row">
+          <span class="nc-row-label">Total OPEX</span>
+          <span class="nc-row-val" style="color:var(--color-text-danger);">–$185M/yr</span>
+        </div>
+        <div style="font-size:11px; color:var(--color-text-tertiary); margin: -4px 0 10px;">SMR ops $50M · DC ops $85M · G&amp;A $50M</div>
+        <div class="nc-row" style="font-weight:500;">
+          <span>EBITDA</span>
+          <span class="nc-row-val green">$304M/yr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="nc-divider">
+
+  <div class="nc-section-label">Energy source for US data centers today vs NovaCORE</div>
+  <div class="nc-fullcard" style="margin-bottom:1.5rem;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+      <div>
+        <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:10px; font-family:'Space Mono',monospace;">US grid average (2025)</div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Natural gas</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:42%; background:#888780;"></div></div><div class="nc-bar-pct">42%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Coal</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:15%; background:#444441;"></div></div><div class="nc-bar-pct">15%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Renewables</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:24%; background:#639922;"></div></div><div class="nc-bar-pct">24%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Nuclear</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:19%; background:#BA7517;"></div></div><div class="nc-bar-pct">19%</div></div>
+      </div>
+      <div>
+        <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:10px; font-family:'Space Mono',monospace;">NovaCORE supply</div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Natural gas</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:0%; background:#888780;"></div></div><div class="nc-bar-pct">0%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Coal</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:0%; background:#444441;"></div></div><div class="nc-bar-pct">0%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Renewables</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:0%; background:#639922;"></div></div><div class="nc-bar-pct">0%</div></div>
+        <div class="nc-bar-row"><div class="nc-bar-label">Nuclear (SMR)</div><div class="nc-bar-track"><div class="nc-bar-fill" style="width:100%; background:#BA7517;"></div></div><div class="nc-bar-pct">100%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="nc-divider">
+
+  <div class="nc-section-label">Business model comparison — why full-stack wins</div>
+  <div class="nc-fullcard" style="padding:0; overflow:hidden; margin-bottom:1.5rem;">
+    <div class="nc-compare-row" style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <div class="nc-compare-cell header"></div>
+      <div class="nc-compare-cell header">Energy-only supplier</div>
+      <div class="nc-compare-cell header" style="border-right:none;">Compute-only colocation</div>
+    </div>
+    <div class="nc-compare-row" style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <div class="nc-compare-cell" style="font-size:11px; color:var(--color-text-tertiary); background:var(--color-background-secondary);">Revenue/yr</div>
+      <div class="nc-compare-cell">~$57M (wholesale rates)</div>
+      <div class="nc-compare-cell" style="border-right:none;">~$432M (but power is 40% of costs)</div>
+    </div>
+    <div class="nc-compare-row" style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <div class="nc-compare-cell" style="font-size:11px; color:var(--color-text-tertiary); background:var(--color-background-secondary);">Margin</div>
+      <div class="nc-compare-cell">Low — commodity pricing</div>
+      <div class="nc-compare-cell" style="border-right:none;">Squeezed by grid power costs</div>
+    </div>
+    <div class="nc-compare-row" style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <div class="nc-compare-cell" style="font-size:11px; color:var(--color-text-tertiary); background:var(--color-background-secondary);">Carbon story</div>
+      <div class="nc-compare-cell">Strong (sells clean power)</div>
+      <div class="nc-compare-cell" style="border-right:none;">Weak (buys from fossil grid)</div>
+    </div>
+    <div class="nc-compare-row">
+      <div class="nc-compare-cell" style="font-size:11px; color:var(--color-text-tertiary); background:var(--color-background-secondary);">Strategic moat</div>
+      <div class="nc-compare-cell">Low — easily replicated</div>
+      <div class="nc-compare-cell" style="border-right:none;">Medium — but power is a liability</div>
+    </div>
+  </div>
+
+  <div class="nc-verdict">
+    <h3>Full-stack is the right call for NovaCORE</h3>
+    <p>Selling power wholesale to the grid at $65/MWh earns ~$57M/year. Selling that same power as AI compute earns ~$432M/year — a 7.6× revenue multiplier on the same electrons. Co-locating the reactor with the data center also eliminates transmission losses, grid congestion risk, and the #1 cost for any competing data center operator. The carbon-free story lets NovaCORE charge a 15–25% premium over fossil-grid competitors.</p>
+  </div>
+
+  <hr class="nc-divider">
+
+  <div class="nc-section-label">SMR technology — X-energy Xe-100</div>
+  <div class="nc-fullcard">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; font-size:13px;">
+      <div>
+        <div class="nc-row"><span class="nc-row-label">Type</span><span class="nc-row-val" style="font-size:12px;">Pebble bed HTGR</span></div>
+        <div class="nc-row"><span class="nc-row-label">Output per unit</span><span class="nc-row-val">80 MW electric</span></div>
+        <div class="nc-row"><span class="nc-row-label">Units planned</span><span class="nc-row-val">4 units (320 MW)</span></div>
+        <div class="nc-row"><span class="nc-row-label">Capacity factor</span><span class="nc-row-val green">95%+</span></div>
+      </div>
+      <div>
+        <div class="nc-row"><span class="nc-row-label">Refueling</span><span class="nc-row-val">Online (no shutdown)</span></div>
+        <div class="nc-row"><span class="nc-row-label">Cooling method</span><span class="nc-row-val">Helium gas cooled</span></div>
+        <div class="nc-row"><span class="nc-row-label">DOE partnership</span><span class="nc-row-val green">ARDP funded</span></div>
+        <div class="nc-row"><span class="nc-row-label">First SMR online</span><span class="nc-row-val">2029 (est.)</span></div>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-tertiary); margin-top:10px; border-top:0.5px solid var(--color-border-tertiary); padding-top:10px;">The Xe-100's 95%+ capacity factor means NovaCORE's compute campus runs on full power 24/7/365 — unlike solar (25% capacity factor) or wind (35%). This is the defining advantage for AI training workloads, which need constant, uninterrupted power.</div>
+  </div>
+
+</div>
